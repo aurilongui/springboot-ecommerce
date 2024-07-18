@@ -29,8 +29,8 @@ public class CategoryController {
     }
 
     @PostMapping("/public/categories")
-    public ResponseEntity<String> createCategory(@Valid @RequestBody Category category) {
-        categoryService.createCategory(category);
+    public ResponseEntity<String> createCategory(@Valid @RequestBody CategoryDTO categoryDTO) {
+        categoryService.createCategory(categoryDTO);
         return new ResponseEntity<>("Categoría añadida correctamente", HttpStatus.CREATED);
     }
 
